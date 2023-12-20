@@ -24,7 +24,7 @@ namespace M2MqttUnity
         public bool restart = false;
         public string topic = "M2MQTT_Unity/test";
 
-        private List<string> eventMessages = new List<string>();
+        //private List<string> eventMessages = new List<string>();
 
         public void RegisterTopicHandler(string topic, MessageReceivedDelegate messageReceivedDelegate)
         {
@@ -68,14 +68,14 @@ namespace M2MqttUnity
                 Connect();
             }
 
-            if (eventMessages.Count > 0)
+            /*if (eventMessages.Count > 0)
             {
                 foreach (string msg in eventMessages)
                 {
 
                 }
                 eventMessages.Clear();
-            }
+            }*/
         }
 
 
