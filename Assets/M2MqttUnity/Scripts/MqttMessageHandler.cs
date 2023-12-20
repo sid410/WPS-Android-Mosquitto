@@ -6,6 +6,7 @@ using M2MqttUnity;
 public class MqttMessageHandler : MonoBehaviour
 {
     public BaseClient baseClient;
+    public ProcessBrokerUpdates brokerUpdates;
 
     [SerializeField]
     private string[] topicList;
@@ -33,7 +34,7 @@ public class MqttMessageHandler : MonoBehaviour
 
     private void ReadBrokerMessage(string topic, string message)
     {
-        Debug.Log("topic: " + topic + " message: " + message);
+        brokerUpdates.UpdateAppInfo(topic, message);
     }
 
 }

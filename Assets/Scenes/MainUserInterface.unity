@@ -330,7 +330,7 @@ Transform:
   - {fileID: 35849218}
   - {fileID: 1855503619}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &369628018
 GameObject:
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 425687658}
   - component: {fileID: 425687661}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: CampusPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -502,7 +502,7 @@ Transform:
   - {fileID: 2113086042}
   - {fileID: 754747471}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -180}
 --- !u!114 &425687661
 MonoBehaviour:
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uidText: {fileID: 448620734}
   mqttMessageHandler: {fileID: 1653943256}
-  baseClient: {fileID: 1653943257}
+  baseClient: {fileID: 1918019520}
 --- !u!4 &434193195
 Transform:
   m_ObjectHideFlags: 0
@@ -565,7 +565,7 @@ Transform:
   m_Children:
   - {fileID: 448620733}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &440122444
 GameObject:
@@ -1554,10 +1554,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1653943258}
-  - component: {fileID: 1653943257}
   - component: {fileID: 1653943256}
+  - component: {fileID: 1653943259}
   m_Layer: 0
-  m_Name: MqttObjects
+  m_Name: MessageUpdateHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1575,30 +1575,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378f06ec4150a434d88c49ac1e1fbc37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseClient: {fileID: 1653943257}
-  topicList: []
---- !u!114 &1653943257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653943255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 504128022f7e7a04dbcad8fa8ba790bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brokerAddress: 172.31.1.15
-  brokerPort: 1883
-  isEncrypted: 0
-  connectionDelay: 500
-  timeoutOnConnection: 30000
-  autoConnect: 1
-  autoTest: 0
-  stopConnection: 0
-  restart: 0
-  topic: DRR/#
+  baseClient: {fileID: 1918019520}
+  brokerUpdates: {fileID: 1653943259}
+  topicList:
+  - DRR/Weather/temperature
+  - DRR/Weather/humidity
+  - DRR/Weather/rain
+  - DRR/Weather/advisory
+  - DRR/Map/Waterlevel/Road/left
+  - DRR/Map/Waterlevel/Road/bottom
+  - DRR/Map/Waterlevel/Road/center
 --- !u!4 &1653943258
 Transform:
   m_ObjectHideFlags: 0
@@ -1612,8 +1598,27 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1653943259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653943255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f30257626aede40b081c45f1fd2192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  temperature: {fileID: 1736112232}
+  humidity: {fileID: 496895144}
+  rain: {fileID: 707598784}
+  advisory: {fileID: 1855503620}
+  left: {fileID: 440122447}
+  bottom: {fileID: 2113086044}
+  center: {fileID: 754747473}
 --- !u!1 &1736112230
 GameObject:
   m_ObjectHideFlags: 0
@@ -2215,6 +2220,60 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1918019519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1918019521}
+  - component: {fileID: 1918019520}
+  m_Layer: 0
+  m_Name: BaseClient
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1918019520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918019519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 504128022f7e7a04dbcad8fa8ba790bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brokerAddress: 172.31.1.15
+  brokerPort: 1883
+  isEncrypted: 0
+  connectionDelay: 500
+  timeoutOnConnection: 30000
+  autoConnect: 1
+  autoTest: 0
+  stopConnection: 0
+  restart: 0
+  topic: DRR/#
+--- !u!4 &1918019521
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918019519}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2113086041
 GameObject:
   m_ObjectHideFlags: 0

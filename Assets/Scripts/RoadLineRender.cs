@@ -16,7 +16,7 @@ public class RoadLineRender : MonoBehaviour
     {
         lineRenderer = GetComponent<LineRenderer>();
         RoadRenderInit();
-        RoadSetColor(Color.green);
+        SetColor(Color.green);
     }
 
     private void RoadRenderInit()
@@ -32,8 +32,27 @@ public class RoadLineRender : MonoBehaviour
         lineRenderer.SetPosition(1, endPoint);
     }
 
-    public void RoadSetColor(Color setColor)
+    private void SetColor(Color setColor)
     {
         lineRenderer.material.color = setColor;
+    }
+
+    public void RoadSetColor(string strColor)
+    {
+        switch (strColor)
+        {
+            case "green":
+                SetColor(Color.green);
+                break;
+            case "yellow":
+                SetColor(Color.yellow);
+                break;
+            case "red":
+                SetColor(Color.red);
+                break;
+            default:
+                Debug.Log("Invalid color");
+                break;
+        }
     }
 }
