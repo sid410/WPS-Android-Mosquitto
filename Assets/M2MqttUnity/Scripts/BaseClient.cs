@@ -23,7 +23,6 @@ namespace M2MqttUnity
         public bool stopConnection = false;
         public bool restart = false;
         public string topic = "M2MQTT_Unity/test";
-        public string lastMsg;
 
         private List<string> eventMessages = new List<string>();
 
@@ -43,6 +42,11 @@ namespace M2MqttUnity
             {
                 m_messageHandlers[topic] -= messageReceivedDelegate;
             }
+        }
+
+        public void PublishMessageHandler(string topic, string message)
+        {
+            client.Publish(topic, System.Text.Encoding.UTF8.GetBytes(message), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
         }
 
 

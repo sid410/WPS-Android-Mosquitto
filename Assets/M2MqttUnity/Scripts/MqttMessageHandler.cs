@@ -12,16 +12,28 @@ public class MqttMessageHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        baseClient.RegisterTopicHandler("UNMqtt", HandleMessage);
+        foreach (string topic in topicList)
+        {
+            baseClient.RegisterTopicHandler(topic, ReadMessage);
+        }
     }
 
     private void OnDisable()
     {
-        baseClient.UnregisterTopicHandler("UNMqtt", HandleMessage);
+        foreach (string topic in topicList)
+        {
+            baseClient.UnregisterTopicHandler(topic, ReadMessage);
+        }
     }
 
-    private void HandleMessage(string topic, string message)
+    public void SendMessage(string topic, string message)
+    {
+        baseClient.PublishMessageHandler(topic, message);
+    }
+
+    private void ReadMessage(string topic, string message)
     {
         Debug.Log("topic: " + topic + " message: " + message);
     }
+
 }
