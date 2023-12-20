@@ -14,7 +14,7 @@ public class MqttMessageHandler : MonoBehaviour
     {
         foreach (string topic in topicList)
         {
-            baseClient.RegisterTopicHandler(topic, ReadMessage);
+            baseClient.RegisterTopicHandler(topic, ReadBrokerMessage);
         }
     }
 
@@ -22,16 +22,16 @@ public class MqttMessageHandler : MonoBehaviour
     {
         foreach (string topic in topicList)
         {
-            baseClient.UnregisterTopicHandler(topic, ReadMessage);
+            baseClient.UnregisterTopicHandler(topic, ReadBrokerMessage);
         }
     }
 
-    public void SendMessage(string topic, string message)
+    public void SendBrokerMessage(string topic, string message)
     {
         baseClient.PublishMessageHandler(topic, message);
     }
 
-    private void ReadMessage(string topic, string message)
+    private void ReadBrokerMessage(string topic, string message)
     {
         Debug.Log("topic: " + topic + " message: " + message);
     }

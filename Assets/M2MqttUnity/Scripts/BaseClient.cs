@@ -24,7 +24,12 @@ namespace M2MqttUnity
         public bool restart = false;
         public string topic = "M2MQTT_Unity/test";
 
-        //private List<string> eventMessages = new List<string>();
+        private bool connectedStatus;
+        public bool Connected
+        {
+            get { return connectedStatus; }
+            set { connectedStatus = value; }
+        }
 
         public void RegisterTopicHandler(string topic, MessageReceivedDelegate messageReceivedDelegate)
         {
@@ -82,11 +87,19 @@ namespace M2MqttUnity
         protected override void OnConnected()
         {
             base.OnConnected();
+            connectedStatus = true;
+        }
 
-            if (autoTest)
-            {
-                client.Publish(topic, System.Text.Encoding.UTF8.GetBytes("On_Connect message sent on topic "+topic), MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE, false);
-            }
+        protected override void OnConnectionLost()
+        {
+            base.OnConnectionLost();
+            connectedStatus = false;
+        }
+
+        protected override void OnDisconnected()
+        {
+            base.OnDisconnected();
+            connectedStatus = false;
         }
 
 
