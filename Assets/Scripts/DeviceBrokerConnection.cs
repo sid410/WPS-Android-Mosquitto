@@ -7,7 +7,7 @@ using UnityEngine;
 public class DeviceBrokerConnection : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI uidText;
+    private TextMeshPro uidText;
 
     public MqttMessageHandler mqttMessageHandler;
     public BaseClient baseClient;
