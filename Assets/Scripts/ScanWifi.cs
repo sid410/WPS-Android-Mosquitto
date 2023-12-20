@@ -3,53 +3,102 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using FSG.Android.Wifi;
+using UnityEditor;
 
 public class ScanWifi : MonoBehaviour
 {
-    public TextMeshProUGUI scanText, stateText;
+    [SerializeField]
+    private TextMeshProUGUI dictText, buttonText;
+
+    [SerializeField]
+    private string WifiNamePattern;
+
+    private Coroutine scanCoroutine;
+    private Dictionary<string, int> wifiSignalStrengths = new Dictionary<string, int>();
+
+    public enum ScanState
+    {
+        Scanning, Stopped
+    }
+    private ScanState State
+    {
+        get;
+        set;
+    }
 
     private void Start()
     {
-        // Start the scan
-        StartCoroutine(PrintWifiNetworks());
+        State = ScanState.Stopped;
+        ToggleScan();
     }
 
-    private IEnumerator PrintWifiNetworks()
+    private IEnumerator ScanWifiNetworks()
     {
-        while (true)
+        Debug.Log("Started Scanning Wifi");
+
+        while (State == ScanState.Scanning)
         {
-            // Check if wifi is enabled
             if (AndroidWifiManager.IsWifiEnabled() == false)
             {
-                // If not, enable it
                 AndroidWifiManager.SetWifiEnabled(true);
-
-                // Give the device time to enable wifi
                 yield return new WaitForSeconds(1);
             }
 
-            // Initiate a scan (not always needed)
             AndroidWifiManager.StartScan();
-
-            stateText.text = "StartScan: " + AndroidWifiManager.StartScan().ToString();
-
-            // Wait for the scan to complete
             yield return new WaitForSeconds(1);
 
-            scanText.text = "";
-
-            // Get the list of scan results
             var results = AndroidWifiManager.GetScanResults();
+
+            // regularly clean the dictionary
+            wifiSignalStrengths.Clear();
+
             foreach (AndroidWifiScanResults result in results)
             {
-                Debug.LogFormat("SSID: {0} Signal: {1}dBm Security Type: {2}", result.SSID, result.level, result.securityType);
-                scanText.text = scanText.text + "SSID: " + result.SSID + " level: " + result.level + "<br>";
-
+                if (result.SSID.StartsWith(WifiNamePattern))
+                {
+                    wifiSignalStrengths.Add(result.SSID, result.level);
+                }
             }
 
-            yield return new WaitForSeconds(5);
+            ShowDictionaryContents(wifiSignalStrengths);
+
+            // In the loop, wait a total of 3 seconds before refresh
+            yield return new WaitForSeconds(1);
         }
-        
+    }
+
+    private void StopWifiScanning()
+    {
+        if (scanCoroutine != null)
+        {
+            StopCoroutine(scanCoroutine);
+            Debug.Log("Stopped Scanning Wifi");
+        }
+    }
+
+    private void ShowDictionaryContents(Dictionary<string, int> dict)
+    {
+        dictText.text = "";
+        foreach (var entry in dict)
+        {
+            dictText.text += $"{entry.Key}: {entry.Value}" + "<br>";
+        }
+    }
+
+    public void ToggleScan()
+    {
+        if (State == ScanState.Scanning)
+        {
+            State = ScanState.Stopped;
+            StopWifiScanning();
+        }
+        else
+        {
+            State = ScanState.Scanning;
+            scanCoroutine = StartCoroutine(ScanWifiNetworks());
+        }
+
+        buttonText.text = State.ToString();
     }
 }
 

@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
-    guid: 5d2086efa18ab164d9a7665b87d4792b
+    path: Assets/Scenes/WifiScanner.unity
+    guid: bd83ffd7a846b914887080f26065138c
   m_configObjects: {}
