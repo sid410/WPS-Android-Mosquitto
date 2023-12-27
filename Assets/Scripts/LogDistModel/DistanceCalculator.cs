@@ -26,7 +26,7 @@ public class DistanceCalculator : MonoBehaviour
     {
         // Example: Calculate distance for Device 0 with RSSI value -70.5
         int deviceID = 0;
-        float rssiValue = -70.5f;
+        float rssiValue = -85f;
         float distance = CalculateDistance(deviceID, rssiValue);
 
         Debug.Log($"Distance from Device {deviceID}: {distance} meters");

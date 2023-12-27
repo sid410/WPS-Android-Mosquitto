@@ -221,9 +221,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceRSSI:
-  - -50
+  - -40
   pathLossExponent:
-  - 5.575875
+  - 3.384962
 --- !u!4 &306286227
 Transform:
   m_ObjectHideFlags: 0
@@ -906,7 +906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceRSSI:
-  - -50
+  - -40
   pathLossExponent:
   - 0
 --- !u!4 &1938763614

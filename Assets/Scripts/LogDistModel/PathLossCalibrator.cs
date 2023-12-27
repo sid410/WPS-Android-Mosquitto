@@ -50,8 +50,8 @@ public class PathLossCalibrator : MonoBehaviour
     void Start()
     {
         int deviceID = 0;
-        float[] distances = { 1f, 2f, 3f, 4f, 5f };
-        float[] rssiValues = { -50f, -60f, -70f, -80f, -90f };
+        float[] distances = { 1f, 30f };
+        float[] rssiValues = { -40f, -90f };
 
         CalibratePathLossExponent(deviceID, distances, rssiValues);
     }
