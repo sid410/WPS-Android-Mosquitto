@@ -9,6 +9,9 @@ using UnityEngine.Windows;
 public class ScanWifi : MonoBehaviour
 {
     [SerializeField]
+    private PlaneCoordinatesMapper planeMapper;
+
+    [SerializeField]
     private TextMeshProUGUI buttonText;
 
     [SerializeField]
@@ -68,7 +71,7 @@ public class ScanWifi : MonoBehaviour
             }
 
             //ShowDictionaryContents(wifiSignalStrengths);
-            // private UpdateDistancesFromAccessPoints();
+            UpdateDistancesFromAccessPoints();
 
             // In the loop, wait a total of 3 seconds before refresh
             yield return new WaitForSeconds(1);
@@ -93,6 +96,11 @@ public class ScanWifi : MonoBehaviour
             dictText.text += $"{entry.Key}: {entry.Value}" + "<br>";
         }
     }*/
+
+    private void UpdateDistancesFromAccessPoints()
+    {
+        planeMapper.UpdateLocationVisualization(GetNearbyAccessPoints());
+    }
 
     private int ExtractAccessPointID(string accessPointID)
     {
@@ -119,6 +127,8 @@ public class ScanWifi : MonoBehaviour
 
     public Dictionary<int, float> GetNearbyAccessPoints()
     {
+        nearbyAccessPoints.Clear();
+
         foreach (var wifi in wifiSignalStrengths)
         {
             int id = ExtractAccessPointID(wifi.Key);

@@ -241,19 +241,19 @@ namespace FSG.Android.Wifi
                 {
                     SSID = "DRR_ESP1",
                     securityType = AndroidWifiSecurityType.OPEN,
-                    level = -50,
+                    level = -100,
                 });
                 results.Add(new AndroidWifiScanResults()
                 {
                     SSID = "DRR_ESP2",
                     securityType = AndroidWifiSecurityType.WEP,
-                    level = -67,
+                    level = -83,
                 });
                 results.Add(new AndroidWifiScanResults()
                 {
                     SSID = "DRR_ESP3",
                     securityType = AndroidWifiSecurityType.WPA,
-                    level = -84,
+                    level = -50,
                 });
             }
 #endif

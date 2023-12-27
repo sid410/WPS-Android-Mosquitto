@@ -595,9 +595,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0826434bca3a84459295dfe3eb63c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myLocationX: 0
-  myLocationY: 0
   myLocationVisualization: {fileID: 369628018}
+  distanceCalculator: {fileID: 128842088}
+  espPos: {fileID: 11400000, guid: 0a80020cedd871b4ca92ca230358c1f2, type: 2}
+  gapBetweenEsp: 30
 --- !u!1 &434193193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,6 +1401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330071ed66c060244acc558a415ad740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planeMapper: {fileID: 425687661}
   buttonText: {fileID: 1301822300}
   wifiNamePattern: DRR_ESP
 --- !u!1 &754747470

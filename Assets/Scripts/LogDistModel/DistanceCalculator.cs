@@ -18,13 +18,4 @@ public class DistanceCalculator : MonoBehaviour
 
         return distance;
     }
-
-    void Start()
-    {
-        int deviceID = 1;
-        float rssiValue = -84f;
-        float distance = CalculateDistance(deviceID, rssiValue);
-
-        Debug.Log($"Distance from Device {deviceID}: {distance} meters");
-    }
 }
