@@ -9,7 +9,7 @@ using UnityEngine.Windows;
 public class ScanWifi : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI dictText, buttonText;
+    private TextMeshProUGUI buttonText;
 
     [SerializeField]
     private string wifiNamePattern;
@@ -68,6 +68,7 @@ public class ScanWifi : MonoBehaviour
             }
 
             //ShowDictionaryContents(wifiSignalStrengths);
+            // private UpdateDistancesFromAccessPoints();
 
             // In the loop, wait a total of 3 seconds before refresh
             yield return new WaitForSeconds(1);
@@ -84,14 +85,14 @@ public class ScanWifi : MonoBehaviour
     }
 
     // for debugging
-    private void ShowDictionaryContents(Dictionary<string, int> dict)
+    /*private void ShowDictionaryContents(Dictionary<string, int> dict)
     {
         dictText.text = "";
         foreach (var entry in dict)
         {
             dictText.text += $"{entry.Key}: {entry.Value}" + "<br>";
         }
-    }
+    }*/
 
     private int ExtractAccessPointID(string accessPointID)
     {
@@ -121,7 +122,9 @@ public class ScanWifi : MonoBehaviour
         foreach (var wifi in wifiSignalStrengths)
         {
             int id = ExtractAccessPointID(wifi.Key);
-            nearbyAccessPoints[id] = wifi.Value;
+
+            // remember, DRR_ESP1 is placed as element 0, thus id = 0
+            nearbyAccessPoints[id-1] = (float)wifi.Value;
         }
         
         return nearbyAccessPoints;
