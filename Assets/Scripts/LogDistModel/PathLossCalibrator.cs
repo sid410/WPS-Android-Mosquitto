@@ -2,19 +2,37 @@ using UnityEngine;
 
 public class PathLossCalibrator : MonoBehaviour
 {
-    // Calibration constants for each device
-    public float[] referenceRSSI; // RSSI at the reference distance (1 meter)
-    public float[] pathLossExponent; // Path loss exponent for each device
+    [SerializeField]
+    private CalibrationConstants calibrationConstants;
+    [SerializeField]
+    private EspData[] espDatas = null;
 
-    // Function to calibrate the path loss exponent
-    public void CalibratePathLossExponent(int deviceID, float[] distances, float[] rssiValues)
+    private void Start()
     {
-        if (deviceID < 0 || deviceID >= referenceRSSI.Length)
+        calibrationConstants.Initialize(espDatas.Length);
+
+        for (int id = 0; id < espDatas.Length; id++) 
         {
-            Debug.LogError("Invalid device ID");
+            SetReferenceRssiValues(id);
+            CalibratePathLossExponent(id, espDatas[id].distances, espDatas[id].rssiValues);
+        }
+    }
+
+    // Do this first before CalibratePathLossExponent to get correct calibration
+    private void SetReferenceRssiValues(int deviceID)
+    {
+        if (espDatas[deviceID].distances[0] != 1f)
+        {
+            Debug.LogError("Please set first element of distances to 1 meter");
             return;
         }
 
+        calibrationConstants.referenceRSSI[deviceID] = espDatas[deviceID].rssiValues[0];
+    }
+
+    // Function to calibrate the path loss exponent
+    private void CalibratePathLossExponent(int deviceID, float[] distances, float[] rssiValues)
+    {
         // Check if there are enough samples
         if (distances.Length != rssiValues.Length || distances.Length < 2)
         {
@@ -31,7 +49,7 @@ public class PathLossCalibrator : MonoBehaviour
         for (int i = 0; i < distances.Length; i++)
         {
             float x = 10 * Mathf.Log10(distances[i]);
-            float y = referenceRSSI[deviceID] - rssiValues[i];
+            float y = calibrationConstants.referenceRSSI[deviceID] - rssiValues[i];
 
             sumX += x;
             sumY += y;
@@ -42,17 +60,6 @@ public class PathLossCalibrator : MonoBehaviour
         float n = (distances.Length * sumXY - sumX * sumY) / (distances.Length * sumX2 - sumX * sumX);
 
         // Update path loss exponent for the device
-        pathLossExponent[deviceID] = n;
-
-        Debug.Log($"Calibrated Path Loss Exponent for Device {deviceID}: {pathLossExponent[deviceID]}");
-    }
-
-    void Start()
-    {
-        int deviceID = 0;
-        float[] distances = { 1f, 30f };
-        float[] rssiValues = { -40f, -90f };
-
-        CalibratePathLossExponent(deviceID, distances, rssiValues);
+        calibrationConstants.pathLossExponent[deviceID] = n;
     }
 }

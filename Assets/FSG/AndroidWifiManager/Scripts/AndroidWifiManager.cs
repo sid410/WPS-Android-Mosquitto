@@ -239,21 +239,21 @@ namespace FSG.Android.Wifi
             {
                 results.Add(new AndroidWifiScanResults()
                 {
-                    SSID = "Editor Test Open",
+                    SSID = "DRR_ESP1",
                     securityType = AndroidWifiSecurityType.OPEN,
-                    level = 100,
+                    level = -50,
                 });
                 results.Add(new AndroidWifiScanResults()
                 {
-                    SSID = "Editor Test WEP",
+                    SSID = "DRR_ESP2",
                     securityType = AndroidWifiSecurityType.WEP,
-                    level = 100,
+                    level = -67,
                 });
                 results.Add(new AndroidWifiScanResults()
                 {
-                    SSID = "Editor Test WPA",
+                    SSID = "DRR_ESP3",
                     securityType = AndroidWifiSecurityType.WPA,
-                    level = 100,
+                    level = -84,
                 });
             }
 #endif

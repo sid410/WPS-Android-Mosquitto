@@ -220,10 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620d8737df8b0494b8b562327d143058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  referenceRSSI:
-  - -40
-  pathLossExponent:
-  - 3.384962
+  calibrationConstants: {fileID: 11400000, guid: fe393437d3458124b814aa13010d36d1, type: 2}
 --- !u!4 &306286227
 Transform:
   m_ObjectHideFlags: 0
@@ -875,7 +872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dictText: {fileID: 1250819642}
   buttonText: {fileID: 1499448586}
-  WifiNamePattern: RSPOT
+  wifiNamePattern: DRR_ESP
 --- !u!1 &1938763612
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,10 +902,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6d804dad5f0e3749a914f6b335e438d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  referenceRSSI:
-  - -40
-  pathLossExponent:
-  - 0
+  calibrationConstants: {fileID: 11400000, guid: fe393437d3458124b814aa13010d36d1, type: 2}
+  espDatas:
+  - {fileID: 11400000, guid: c312c415bd255ba4089ccd741bdbcb07, type: 2}
+  - {fileID: 11400000, guid: 0369a22545c3b664ba87d6a2fa312f39, type: 2}
+  - {fileID: 11400000, guid: 3408d1dbabc6cba44aceb88841e1c672, type: 2}
 --- !u!4 &1938763614
 Transform:
   m_ObjectHideFlags: 0
