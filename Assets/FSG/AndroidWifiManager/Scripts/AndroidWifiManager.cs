@@ -247,11 +247,41 @@ namespace FSG.Android.Wifi
                 {
                     SSID = "DRR_ESP2",
                     securityType = AndroidWifiSecurityType.WEP,
-                    level = -83,
+                    level = -80,
                 });
                 results.Add(new AndroidWifiScanResults()
                 {
                     SSID = "DRR_ESP3",
+                    securityType = AndroidWifiSecurityType.WPA,
+                    level = -100,
+                });
+                results.Add(new AndroidWifiScanResults()
+                {
+                    SSID = "DRR_ESP4",
+                    securityType = AndroidWifiSecurityType.OPEN,
+                    level = -100,
+                });
+                results.Add(new AndroidWifiScanResults()
+                {
+                    SSID = "DRR_ESP5",
+                    securityType = AndroidWifiSecurityType.WEP,
+                    level = -100,
+                });
+                results.Add(new AndroidWifiScanResults()
+                {
+                    SSID = "DRR_ESP6",
+                    securityType = AndroidWifiSecurityType.WPA,
+                    level = -100,
+                });
+                results.Add(new AndroidWifiScanResults()
+                {
+                    SSID = "DRR_ESP7",
+                    securityType = AndroidWifiSecurityType.WEP,
+                    level = -100,
+                });
+                results.Add(new AndroidWifiScanResults()
+                {
+                    SSID = "DRR_ESP8",
                     securityType = AndroidWifiSecurityType.WPA,
                     level = -100,
                 });

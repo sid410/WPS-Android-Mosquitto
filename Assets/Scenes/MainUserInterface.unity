@@ -720,8 +720,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bfac8405d2c9643927ef2d0e5f6d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startRoad: {x: 88, y: 149}
-  endRoad: {x: 185, y: 380}
+  startRoad: {x: 82, y: 149}
+  endRoad: {x: 172, y: 348}
   planeCoordinatesMapper: {fileID: 425687661}
 --- !u!1 &448620732
 GameObject:
@@ -1116,6 +1116,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c312c415bd255ba4089ccd741bdbcb07, type: 2}
   - {fileID: 11400000, guid: 0369a22545c3b664ba87d6a2fa312f39, type: 2}
   - {fileID: 11400000, guid: 3408d1dbabc6cba44aceb88841e1c672, type: 2}
+  - {fileID: 11400000, guid: b99e6cac1bc68d1469f529a8853a5b46, type: 2}
+  - {fileID: 11400000, guid: 5ed51101969596745b1c73ffdc09258b, type: 2}
+  - {fileID: 11400000, guid: 4da467f61c935b141b5614c4234167a9, type: 2}
+  - {fileID: 11400000, guid: 96757488044dd2346aa2d1630e955445, type: 2}
+  - {fileID: 11400000, guid: 3e62f57842713064092e14678e36b714, type: 2}
 --- !u!1 &707598782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,8 +1483,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bfac8405d2c9643927ef2d0e5f6d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startRoad: {x: 260, y: 325}
-  endRoad: {x: 200, y: 152}
+  startRoad: {x: 196, y: 144}
+  endRoad: {x: 261, y: 319}
   planeCoordinatesMapper: {fileID: 425687661}
 --- !u!1 &910547501
 GameObject:
@@ -2896,6 +2901,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bfac8405d2c9643927ef2d0e5f6d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startRoad: {x: 181, y: 361}
-  endRoad: {x: 404, y: 277}
+  startRoad: {x: 172, y: 348}
+  endRoad: {x: 399, y: 271}
   planeCoordinatesMapper: {fileID: 425687661}
