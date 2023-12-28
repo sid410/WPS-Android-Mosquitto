@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/WifiScanner.unity
-    guid: bd83ffd7a846b914887080f26065138c
   - enabled: 1
     path: Assets/Scenes/MainUserInterface.unity
     guid: b9b85e4d64d79384fa03419b714afdb7

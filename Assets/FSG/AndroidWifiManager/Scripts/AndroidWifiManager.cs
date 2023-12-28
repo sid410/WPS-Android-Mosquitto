@@ -239,21 +239,51 @@ namespace FSG.Android.Wifi
             {
                 results.Add(new AndroidWifiScanResults()
                 {
-                    SSID = "Editor Test Open",
+                    SSID = "DRR_ESP1",
                     securityType = AndroidWifiSecurityType.OPEN,
-                    level = 100,
+                    level = -77,
                 });
                 results.Add(new AndroidWifiScanResults()
                 {
-                    SSID = "Editor Test WEP",
+                    SSID = "DRR_ESP2",
                     securityType = AndroidWifiSecurityType.WEP,
-                    level = 100,
+                    level = -80,
                 });
                 results.Add(new AndroidWifiScanResults()
                 {
-                    SSID = "Editor Test WPA",
+                    SSID = "DRR_ESP3",
                     securityType = AndroidWifiSecurityType.WPA,
-                    level = 100,
+                    level = -100,
+                });
+                results.Add(new AndroidWifiScanResults()
+                {
+                    SSID = "DRR_ESP4",
+                    securityType = AndroidWifiSecurityType.OPEN,
+                    level = -100,
+                });
+                results.Add(new AndroidWifiScanResults()
+                {
+                    SSID = "DRR_ESP5",
+                    securityType = AndroidWifiSecurityType.WEP,
+                    level = -100,
+                });
+                results.Add(new AndroidWifiScanResults()
+                {
+                    SSID = "DRR_ESP6",
+                    securityType = AndroidWifiSecurityType.WPA,
+                    level = -100,
+                });
+                results.Add(new AndroidWifiScanResults()
+                {
+                    SSID = "DRR_ESP7",
+                    securityType = AndroidWifiSecurityType.WEP,
+                    level = -100,
+                });
+                results.Add(new AndroidWifiScanResults()
+                {
+                    SSID = "DRR_ESP8",
+                    securityType = AndroidWifiSecurityType.WPA,
+                    level = -100,
                 });
             }
 #endif

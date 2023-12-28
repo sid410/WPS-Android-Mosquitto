@@ -1,0 +1,1071 @@
+fileFormatVersion: 2
+guid: 0f0de5d26e075df448e3f90d52aae5ee
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WifiSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2260
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa1a2254df346443b32b59b5824d0a1
+      internalID: 1251046756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 2260
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a50aa8f69ce4b468bf48645b97a8fb
+      internalID: 1874601220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 2260
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f8ad1fbad649084397edf24d7c1b5fd
+      internalID: 465064678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 2260
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607302c622314344b9cdce9db74ef879
+      internalID: 462751808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 2260
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b8eba49c074ad41bcfc4967ebc6639
+      internalID: 1300613182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 2260
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ae67e93221a6a4296ec725de9e1363
+      internalID: -1000017806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 2260
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8acdfea59d590439732fd0e81e3af2
+      internalID: 345876242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1810
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd48a327f434e794db63242d67151c27
+      internalID: -1959684929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1810
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac7836491d282824f80918a85b21eac7
+      internalID: -1520007763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1810
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db01a6ba896fbd14bb65d9edf61d1676
+      internalID: -825184687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 1810
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115a5071a0fc9894f898d363f62d851d
+      internalID: 1654960251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1810
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5415c1f1311c8ae4ab6645d69da87e57
+      internalID: 293351625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 1810
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d44a2053fda9647a927f36d5c2b34f
+      internalID: -463122467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1810
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96a425c53252414cb25d313b210bca0
+      internalID: 1098092036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1360
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b444235e43d78248843fe75eb0885c7
+      internalID: -514660479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1360
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79bb093042a8ef4ca1716a87e113f4a
+      internalID: 1704093874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1360
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c349e5e2eacc53941b74281cb8c6ba3f
+      internalID: 887788036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 1360
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96df1c65e9d90894eb99aa5710f1f9da
+      internalID: -1706890308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1360
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f4a11241dc72c48bcd1b0499ab5530
+      internalID: 99189619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 1360
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15cbdf7825fc93943bbe23c2cf27c7dc
+      internalID: 1336743436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1360
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061ecd277c1799c42ae8642aec77e82c
+      internalID: 1794620747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 910
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c36d085e23d49cc4dbed1dc9213d188d
+      internalID: 509453133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 910
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0880008babd7249a43708c68e080fa
+      internalID: -762978679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 910
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583a6bba891b78f42b46f654a0d639f0
+      internalID: -1164511167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 910
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1088a10c7b53848a34ba9d3feee336
+      internalID: 399643444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 910
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe836db8a0bfb94d8d464830d92b7ed
+      internalID: -1362888485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 910
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025f6f4ce856bf248bafb7d450830550
+      internalID: -700641005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 910
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e57ccf19b6c0224c89b944e9a37eb17
+      internalID: -638390062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 460
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c4bc44feff7774dbd38a625f0b951f
+      internalID: -1886499361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 460
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08409c0f912bb8140944916bb79ddfcb
+      internalID: 93830698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 460
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dcc9f92af375954eb13e064a6f01048
+      internalID: 1945234494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 460
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b4d4eb36ba12340885b35da023b0d2
+      internalID: -965362033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 460
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3e746214621c24aba6ab8cb10cdb2c
+      internalID: -1685017918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 460
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa80feba62fdd045bb0d8556e6d895b
+      internalID: -421382499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 460
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e1c6f36300bf84e8c98afb0fc83167
+      internalID: -1309727920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dfa7fe8bcf2a8b4a89f9364606bace1
+      internalID: 1602188158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 10
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbd02aa35da70c4f873ced6240594a3
+      internalID: 545752755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 10
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773e60e55c40dbf4ca26a7bcbd0a8e7b
+      internalID: 633388105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 10
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343af3a9725fc1e4594f6652619b8174
+      internalID: -784124217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 10
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c5414e2a584754a9f28abb9e4e8753
+      internalID: 64239693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 10
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a2ef75b6ad4f042888c13c3231ed41
+      internalID: 1824583145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WifiSpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 10
+        width: 438
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b11c97edd5be1499e03463ad368e13
+      internalID: -1781426408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      WifiSpriteSheet_0: 1251046756
+      WifiSpriteSheet_1: 1874601220
+      WifiSpriteSheet_10: 1654960251
+      WifiSpriteSheet_11: 293351625
+      WifiSpriteSheet_12: -463122467
+      WifiSpriteSheet_13: 1098092036
+      WifiSpriteSheet_14: -514660479
+      WifiSpriteSheet_15: 1704093874
+      WifiSpriteSheet_16: 887788036
+      WifiSpriteSheet_17: -1706890308
+      WifiSpriteSheet_18: 99189619
+      WifiSpriteSheet_19: 1336743436
+      WifiSpriteSheet_2: 465064678
+      WifiSpriteSheet_20: 1794620747
+      WifiSpriteSheet_21: 509453133
+      WifiSpriteSheet_22: -762978679
+      WifiSpriteSheet_23: -1164511167
+      WifiSpriteSheet_24: 399643444
+      WifiSpriteSheet_25: -1362888485
+      WifiSpriteSheet_26: -700641005
+      WifiSpriteSheet_27: -638390062
+      WifiSpriteSheet_28: -1886499361
+      WifiSpriteSheet_29: 93830698
+      WifiSpriteSheet_3: 462751808
+      WifiSpriteSheet_30: 1945234494
+      WifiSpriteSheet_31: -965362033
+      WifiSpriteSheet_32: -1685017918
+      WifiSpriteSheet_33: -421382499
+      WifiSpriteSheet_34: -1309727920
+      WifiSpriteSheet_35: 1602188158
+      WifiSpriteSheet_36: 545752755
+      WifiSpriteSheet_37: 633388105
+      WifiSpriteSheet_38: -784124217
+      WifiSpriteSheet_39: 64239693
+      WifiSpriteSheet_4: 1300613182
+      WifiSpriteSheet_40: 1824583145
+      WifiSpriteSheet_41: -1781426408
+      WifiSpriteSheet_5: -1000017806
+      WifiSpriteSheet_6: 345876242
+      WifiSpriteSheet_7: -1959684929
+      WifiSpriteSheet_8: -1520007763
+      WifiSpriteSheet_9: -825184687
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
