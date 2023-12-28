@@ -241,7 +241,7 @@ namespace FSG.Android.Wifi
                 {
                     SSID = "DRR_ESP1",
                     securityType = AndroidWifiSecurityType.OPEN,
-                    level = -100,
+                    level = -77,
                 });
                 results.Add(new AndroidWifiScanResults()
                 {
@@ -253,7 +253,7 @@ namespace FSG.Android.Wifi
                 {
                     SSID = "DRR_ESP3",
                     securityType = AndroidWifiSecurityType.WPA,
-                    level = -50,
+                    level = -100,
                 });
             }
 #endif

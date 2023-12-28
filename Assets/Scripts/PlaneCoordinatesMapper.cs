@@ -14,10 +14,14 @@ public class PlaneCoordinatesMapper : MonoBehaviour
     [SerializeField]
     private EspPositions espPos;
 
-    [SerializeField]
-    private float gapBetweenEsp;
-
     private Dictionary<int, float> accesspointDistances = new Dictionary<int, float>();
+
+    private void Start()
+    {
+        // need to have pixel coordinate of esp 1 and 2 (element 0 and 1)
+        // plus the gap between them in meters, set in EspPositions ScriptableObject
+        espPos.CalibrateMeterPixelRatio();
+    }
 
     public Vector3 MapToLocalPlane(Vector2 input)
     {
@@ -54,9 +58,12 @@ public class PlaneCoordinatesMapper : MonoBehaviour
         float leastValue = leastValues[0].Value;
         float secondLeastValue = leastValues[1].Value;
 
-        Vector2 twoDimLoc = InterpolatePoints(  espPos.pixelCoordinates[leastValues[0].Key], 
+        float meterGap = espPos.meterPixelRatio * Vector2.Distance(espPos.pixelCoordinates[leastValues[0].Key], 
+                                                                    espPos.pixelCoordinates[leastValues[1].Key]);
+
+        Vector2 twoDimLoc = InterpolatePoints(espPos.pixelCoordinates[leastValues[0].Key],
                                                 espPos.pixelCoordinates[leastValues[1].Key],
-                                                leastValues[0].Value / gapBetweenEsp);
+                                                leastValues[0].Value / meterGap);
 
         Vector3 threeDimLoc = MapToLocalPlane(twoDimLoc);
         threeDimLoc.y += 2f;

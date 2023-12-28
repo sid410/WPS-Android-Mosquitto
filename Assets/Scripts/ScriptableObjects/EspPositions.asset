@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1de27032bfe85bc45a761c4fe018abef, type: 3}
   m_Name: EspPositions
   m_EditorClassIdentifier: 
+  firstTwoEspGap: 30
+  meterPixelRatio: 0
   pixelCoordinates:
   - {x: 108, y: 194}
   - {x: 143, y: 277.5}
