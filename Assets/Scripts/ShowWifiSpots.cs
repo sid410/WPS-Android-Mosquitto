@@ -26,7 +26,7 @@ public class ShowWifiSpots : MonoBehaviour
         wifiToSpawn = new List<int>();
         wifiToDestroy = new List<int>();
 
-        StartCoroutine(InjectTestData());
+        //StartCoroutine(InjectTestData());
     }
 
     public void UpdateWifiVisualizations(Dictionary<int, float> apDictionary)
@@ -101,7 +101,11 @@ public class ShowWifiSpots : MonoBehaviour
         testData.Remove(1);
         testData.Add(2, 0);
         UpdateWifiVisualizations(testData);
+        yield return new WaitForSeconds(3);
 
+        testData.Remove(2);
+        testData.Add(0, 0);
+        UpdateWifiVisualizations(testData);
         Debug.Log("Testing ended");
     }
 }

@@ -72,7 +72,6 @@ public class ScanWifi : MonoBehaviour
                 }
             }
 
-            //ShowDictionaryContents(wifiSignalStrengths);
             UpdateAccessPointsChanges();
 
             // In the loop, wait a total of 3 seconds before refresh
@@ -89,22 +88,12 @@ public class ScanWifi : MonoBehaviour
         }
     }
 
-    // for debugging
-    /*private void ShowDictionaryContents(Dictionary<string, int> dict)
-    {
-        dictText.text = "";
-        foreach (var entry in dict)
-        {
-            dictText.text += $"{entry.Key}: {entry.Value}" + "<br>";
-        }
-    }*/
-
     private void UpdateAccessPointsChanges()
     {
         Dictionary<int, float> accessPoints = GetNearbyAccessPoints();
 
         planeMapper.UpdateLocationVisualization(accessPoints);
-        //showWifi.UpdateWifiVisualizations(accessPoints);
+        showWifi.UpdateWifiVisualizations(accessPoints);
     }
 
     private int ExtractAccessPointID(string accessPointID)
