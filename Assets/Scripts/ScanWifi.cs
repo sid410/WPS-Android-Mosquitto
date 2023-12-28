@@ -10,6 +10,8 @@ public class ScanWifi : MonoBehaviour
 {
     [SerializeField]
     private PlaneCoordinatesMapper planeMapper;
+    [SerializeField]
+    private ShowWifiSpots showWifi;
 
     [SerializeField]
     private TextMeshProUGUI buttonText;
@@ -71,7 +73,7 @@ public class ScanWifi : MonoBehaviour
             }
 
             //ShowDictionaryContents(wifiSignalStrengths);
-            UpdateDistancesFromAccessPoints();
+            UpdateAccessPointsChanges();
 
             // In the loop, wait a total of 3 seconds before refresh
             yield return new WaitForSeconds(1);
@@ -97,9 +99,12 @@ public class ScanWifi : MonoBehaviour
         }
     }*/
 
-    private void UpdateDistancesFromAccessPoints()
+    private void UpdateAccessPointsChanges()
     {
-        planeMapper.UpdateLocationVisualization(GetNearbyAccessPoints());
+        Dictionary<int, float> accessPoints = GetNearbyAccessPoints();
+
+        planeMapper.UpdateLocationVisualization(accessPoints);
+        //showWifi.UpdateWifiVisualizations(accessPoints);
     }
 
     private int ExtractAccessPointID(string accessPointID)
@@ -132,6 +137,8 @@ public class ScanWifi : MonoBehaviour
         foreach (var wifi in wifiSignalStrengths)
         {
             int id = ExtractAccessPointID(wifi.Key);
+
+            if (id == -1) continue; // skip for invalid IDs
 
             // remember, DRR_ESP1 is placed as element 0, thus id = 0
             nearbyAccessPoints[id-1] = (float)wifi.Value;
