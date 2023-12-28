@@ -6,7 +6,7 @@ using System;
 public class PlaneCoordinatesMapper : MonoBehaviour
 {
     [SerializeField]
-    private GameObject myLocationVisualization;
+    private GameObject personVisualization;
 
     [SerializeField]
     private DistanceCalculator distanceCalculator;
@@ -47,10 +47,10 @@ public class PlaneCoordinatesMapper : MonoBehaviour
         // we cannot predict the location if there is less than 2 points
         if (accesspointDistances.Count < 2) return;
 
-        FindTwoDimensionCoordinate(accesspointDistances);
+        FindPersonMapLocation(accesspointDistances);
     }
 
-    private void FindTwoDimensionCoordinate(Dictionary<int, float> dictionary)
+    private void FindPersonMapLocation(Dictionary<int, float> dictionary)
     {
         var orderedDictionary = dictionary.OrderBy(kvp => kvp.Value);
         var leastValues = orderedDictionary.Take(2).ToArray();
@@ -66,9 +66,9 @@ public class PlaneCoordinatesMapper : MonoBehaviour
                                                 leastValues[0].Value / meterGap);
 
         Vector3 threeDimLoc = MapToLocalPlane(twoDimLoc);
-        threeDimLoc.y += 2f;
+        threeDimLoc.y += 2f; // put as 2nd layer
 
-        myLocationVisualization.transform.localPosition = threeDimLoc;
+        personVisualization.transform.localPosition = threeDimLoc;
     }
 
     private Vector2 InterpolatePoints(Vector2 point1, Vector2 point2, float percent)
