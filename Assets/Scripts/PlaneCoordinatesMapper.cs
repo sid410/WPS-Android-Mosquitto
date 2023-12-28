@@ -45,7 +45,12 @@ public class PlaneCoordinatesMapper : MonoBehaviour
         }
 
         // we cannot predict the location if there is less than 2 points
-        if (accesspointDistances.Count < 2) return;
+        if (accesspointDistances.Count < 2)
+        {
+            personVisualization.SetActive(false);
+            return;
+        }
+        else personVisualization.SetActive(true);
 
         FindPersonMapLocation(accesspointDistances);
     }
