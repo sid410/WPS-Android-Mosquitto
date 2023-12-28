@@ -9,8 +9,10 @@ public class DeviceBrokerConnection : MonoBehaviour
     [SerializeField]
     private TextMeshPro uidText;
 
-    public MqttMessageHandler mqttMessageHandler;
-    public BaseClient baseClient;
+    [SerializeField]
+    private MqttMessageHandler mqttMessageHandler;
+    [SerializeField]
+    private BaseClient baseClient;
 
     private void Start()
     {

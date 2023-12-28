@@ -513,6 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personVisualization: {fileID: 910547501}
+  mqttMessageHandler: {fileID: 1653943256}
   distanceCalculator: {fileID: 128842088}
   espPos: {fileID: 11400000, guid: 0a80020cedd871b4ca92ca230358c1f2, type: 2}
 --- !u!114 &425687662

@@ -9,6 +9,9 @@ public class PlaneCoordinatesMapper : MonoBehaviour
     private GameObject personVisualization;
 
     [SerializeField]
+    private MqttMessageHandler mqttMessageHandler;
+
+    [SerializeField]
     private DistanceCalculator distanceCalculator;
 
     [SerializeField]
@@ -70,6 +73,9 @@ public class PlaneCoordinatesMapper : MonoBehaviour
                                                 espPos.pixelCoordinates[leastValues[1].Key],
                                                 leastValues[0].Value / meterGap);
 
+        // publish to Node-red server
+        PublishLocationToServer(twoDimLoc);
+
         Vector3 threeDimLoc = MapToLocalPlane(twoDimLoc);
         threeDimLoc.y += 2f; // put as 2nd layer
         threeDimLoc.z -= 0.3f; // offset to up a little
@@ -85,5 +91,11 @@ public class PlaneCoordinatesMapper : MonoBehaviour
         float y = Mathf.Lerp(point1.y, point2.y, percent);
 
         return new Vector2(x, y);
+    }
+
+    private void PublishLocationToServer(Vector2 personMapLocation)
+    {
+        string strLocation = $"x: {personMapLocation.x}, y: {personMapLocation.y}";
+        mqttMessageHandler.SendBrokerMessage($"DRR/Map/{SystemInfo.deviceUniqueIdentifier}/pos", strLocation);
     }
 }

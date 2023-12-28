@@ -5,8 +5,10 @@ using M2MqttUnity;
 
 public class MqttMessageHandler : MonoBehaviour
 {
-    public BaseClient baseClient;
-    public ProcessBrokerUpdates brokerUpdates;
+    [SerializeField]
+    private BaseClient baseClient;
+    [SerializeField]
+    private ProcessBrokerUpdates brokerUpdates;
 
     [SerializeField]
     private string[] topicList;
