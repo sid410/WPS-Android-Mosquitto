@@ -283,7 +283,7 @@ namespace FSG.Android.Wifi
                 {
                     SSID = "DRR_ESP8",
                     securityType = AndroidWifiSecurityType.WPA,
-                    level = -100,
+                    level = -50,
                 });
             }
 #endif
