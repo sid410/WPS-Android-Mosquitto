@@ -85,6 +85,11 @@ public class ScanWifi : MonoBehaviour
         {
             StopCoroutine(scanCoroutine);
             Debug.Log("Stopped Scanning Wifi");
+
+            // Erase the visualizations by passing an empty dictionary
+            Dictionary<int, float> accessPoints = new Dictionary<int, float>();
+            planeMapper.UpdateLocationVisualization(accessPoints);
+            showWifi.UpdateWifiVisualizations(accessPoints);
         }
     }
 

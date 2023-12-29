@@ -8,6 +8,11 @@ public class PlaneCoordinatesMapper : MonoBehaviour
 {
     [SerializeField]
     private GameObject personVisualization;
+
+    [SerializeField]
+    private Sprite idleSprite;
+    private SpriteRenderer personSprite;
+    private Animator personWalkingAnim;
     private bool isPersonLerping;
 
     [SerializeField]
@@ -27,6 +32,8 @@ public class PlaneCoordinatesMapper : MonoBehaviour
         // plus the gap between them in meters, set in EspPositions ScriptableObject
         espPos.CalibrateMeterPixelRatio();
 
+        personSprite = personVisualization.GetComponent<SpriteRenderer>();
+        personWalkingAnim = personVisualization.GetComponent<Animator>();
         isPersonLerping = false;
     }
 
@@ -54,10 +61,12 @@ public class PlaneCoordinatesMapper : MonoBehaviour
         // we cannot predict the location if there is less than 2 points
         if (accesspointDistances.Count < 2)
         {
-            personVisualization.SetActive(false);
+            personWalkingAnim.enabled = false;
+            personSprite.sprite = idleSprite;
+            //personVisualization.SetActive(false);
             return;
         }
-        else personVisualization.SetActive(true);
+        else personWalkingAnim.enabled = true;
 
         FindPersonMapLocation(accesspointDistances);
     }

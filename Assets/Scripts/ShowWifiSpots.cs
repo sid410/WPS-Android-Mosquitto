@@ -31,8 +31,6 @@ public class ShowWifiSpots : MonoBehaviour
 
     public void UpdateWifiVisualizations(Dictionary<int, float> apDictionary)
     {
-        if(apDictionary.Count < 1) return;
-
         // clear the list contents
         activeWifis.Clear();
         wifiToSpawn.Clear();
