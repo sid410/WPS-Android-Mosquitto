@@ -2,11 +2,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using System.Collections;
 
 public class PlaneCoordinatesMapper : MonoBehaviour
 {
     [SerializeField]
     private GameObject personVisualization;
+    private bool isPersonLerping;
 
     [SerializeField]
     private MqttMessageHandler mqttMessageHandler;
@@ -24,6 +26,8 @@ public class PlaneCoordinatesMapper : MonoBehaviour
         // need to have pixel coordinate of esp 1 and 2 (element 0 and 1)
         // plus the gap between them in meters, set in EspPositions ScriptableObject
         espPos.CalibrateMeterPixelRatio();
+
+        isPersonLerping = false;
     }
 
     public Vector3 MapToLocalPlane(Vector2 input)
@@ -79,7 +83,8 @@ public class PlaneCoordinatesMapper : MonoBehaviour
         Vector3 threeDimLoc = MapToLocalPlane(twoDimLoc);
         threeDimLoc.z -= 0.3f; // offset to up a little
 
-        personVisualization.transform.localPosition = threeDimLoc;
+        //personVisualization.transform.localPosition = threeDimLoc;
+        StartCoroutine(LerpPosition(personVisualization, threeDimLoc, 0.2f));
     }
 
     private Vector2 InterpolatePoints(Vector2 point1, Vector2 point2, float percent)
@@ -96,5 +101,24 @@ public class PlaneCoordinatesMapper : MonoBehaviour
     {
         string strLocation = $"x: {personMapLocation.x}, y: {personMapLocation.y}";
         mqttMessageHandler.SendBrokerMessage($"DRR/Map/{SystemInfo.deviceUniqueIdentifier}/pos", strLocation);
+    }
+
+    private IEnumerator LerpPosition(GameObject objectToLerp, Vector3 targetPosition, float lerpDuration)
+    {
+        if (isPersonLerping) yield break;
+        isPersonLerping = true;
+
+        float timeElapsed = 0f;
+        Vector3 initialPosition = objectToLerp.transform.localPosition;
+
+        while (timeElapsed < lerpDuration)
+        {
+            objectToLerp.transform.localPosition = Vector3.Lerp(initialPosition, targetPosition, timeElapsed / lerpDuration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        objectToLerp.transform.localPosition = targetPosition;
+        isPersonLerping = false;
     }
 }
