@@ -77,7 +77,6 @@ public class PlaneCoordinatesMapper : MonoBehaviour
         PublishLocationToServer(twoDimLoc);
 
         Vector3 threeDimLoc = MapToLocalPlane(twoDimLoc);
-        threeDimLoc.y += 2f; // put as 2nd layer
         threeDimLoc.z -= 0.3f; // offset to up a little
 
         personVisualization.transform.localPosition = threeDimLoc;

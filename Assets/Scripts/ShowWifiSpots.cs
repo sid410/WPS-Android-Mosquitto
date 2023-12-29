@@ -66,7 +66,7 @@ public class ShowWifiSpots : MonoBehaviour
             wifiVisualization[id].transform.localEulerAngles = new Vector3(90f, 0.2f, 180f);
 
             Vector3 mapLocation = planeMapper.MapToLocalPlane(espPos.pixelCoordinates[id]);
-            wifiVisualization[id].transform.localPosition = new Vector3(mapLocation.x, 4f, mapLocation.z);
+            wifiVisualization[id].transform.localPosition = new Vector3(mapLocation.x, 0f, mapLocation.z - 0.2f);
         }
     }
 
