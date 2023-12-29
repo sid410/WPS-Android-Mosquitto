@@ -14,8 +14,21 @@ public class DeviceBrokerConnection : MonoBehaviour
     [SerializeField]
     private BaseClient baseClient;
 
+    private string deviceId;
+
+    private void OnEnable()
+    {
+        baseClient.RegisterTopicHandler("DRR/DeregisterSuccess", QuitApplication);
+    }
+
+    private void OnDisable()
+    {
+        baseClient.UnregisterTopicHandler("DRR/DeregisterSuccess", QuitApplication);
+    }
+
     private void Start()
     {
+        deviceId = SystemInfo.deviceUniqueIdentifier;
         StartCoroutine(RegisterDeviceToBroker());
     }
 
@@ -29,8 +42,25 @@ public class DeviceBrokerConnection : MonoBehaviour
             yield return null;
         }
 
-        string deviceId = SystemInfo.deviceUniqueIdentifier;
         uidText.text = "UID: " + deviceId;
         mqttMessageHandler.SendBrokerMessage("DRR/RegisterUID", deviceId);
     }
+
+    public void OnQuitButtonPressed()
+    {
+        mqttMessageHandler.SendBrokerMessage("DRR/DeregisterUID", deviceId);
+    }
+
+    private void QuitApplication(string topic, string message)
+    {
+        if (topic != "DRR/DeregisterSuccess") return;
+        if (message != deviceId) return;
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
+
 }
